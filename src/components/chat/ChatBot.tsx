@@ -96,8 +96,9 @@ export default function ChatBot() {
         animate={{ scale: isOpen ? 0 : 1 }}
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
         aria-label="Abrir asistente virtual"
+        className="chatbot-float-btn"
         style={{
-          position: "fixed", bottom: "1.75rem", right: "1.75rem", zIndex: 9999,
+          position: "fixed", right: "1.75rem", zIndex: 9999,
           width: "60px", height: "60px", borderRadius: "50%",
           background: "linear-gradient(135deg, var(--color-cyan) 0%, #0891b2 100%)",
           color: "white", border: "none", cursor: "pointer",

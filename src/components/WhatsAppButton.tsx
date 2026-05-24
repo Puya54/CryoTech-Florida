@@ -38,7 +38,6 @@ export default function WhatsAppButton() {
       aria-label="Contactar por WhatsApp"
       style={{
         position: "fixed",
-        bottom: "6.5rem",   /* above ChatBot button */
         right: "1.75rem",
         zIndex: 9990,
         width: "56px",

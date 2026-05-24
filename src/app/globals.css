@@ -341,3 +341,20 @@ body {
 @media (max-width: 767px) {
   .mobile-bottom-spacing { padding-bottom: 80px; }
 }
+
+/* ─── Floating Buttons Positioning & Mobile Offsets ─────────────────────────── */
+#whatsapp-float {
+  bottom: 6.5rem;
+}
+.chatbot-float-btn {
+  bottom: 1.75rem;
+}
+
+@media (max-width: 767px) {
+  #whatsapp-float {
+    bottom: 11rem;
+  }
+  .chatbot-float-btn {
+    bottom: 6.5rem;
+  }
+}

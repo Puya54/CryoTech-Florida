@@ -73,7 +73,7 @@ export default function Header() {
             </button>
 
             {/* Desktop Nav */}
-            <nav style={{ display: "flex", alignItems: "center", gap: "0.25rem" }} className="hidden md:flex">
+            <nav style={{ alignItems: "center", gap: "0.25rem" }} className="hidden md:flex">
               {NAV_LINKS.map((link) => (
                 <button
                   key={link.key}
@@ -156,12 +156,14 @@ export default function Header() {
             transition={{ duration: 0.2 }}
             style={{
               position: "fixed", top: "72px", left: 0, right: 0, zIndex: 40,
-              background: "rgba(255,255,255,0.97)", backdropFilter: "blur(12px)",
+              background: scrolled ? "rgba(255, 255, 255, 0.96)" : "rgba(255, 255, 255, 0.98)",
+              backdropFilter: "blur(16px)",
               borderBottom: "1px solid var(--color-border)",
               padding: "1rem 1.5rem 1.5rem",
+              boxShadow: "0 10px 25px -5px rgba(15, 23, 42, 0.08)",
             }}
           >
-            <nav style={{ display: "flex", flexDirection: "column", gap: "0.25rem" }}>
+            <nav style={{ display: "flex", flexDirection: "column", gap: "0.35rem" }}>
               {NAV_LINKS.map((link) => (
                 <button
                   key={link.key}
@@ -169,17 +171,27 @@ export default function Header() {
                   style={{
                     background: "none", border: "none", cursor: "pointer",
                     padding: "0.75rem 1rem", borderRadius: "8px",
-                    fontSize: "1rem", fontWeight: 500, color: "var(--color-ink)",
+                    fontSize: "0.95rem", fontWeight: 600, color: "var(--color-ink)",
                     textAlign: "left", transition: "all 0.2s",
+                    display: "flex", alignItems: "center", justifyContent: "space-between",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = "var(--color-cyan)";
+                    e.currentTarget.style.background = "var(--color-cyan-glow)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = "var(--color-ink)";
+                    e.currentTarget.style.background = "none";
                   }}
                 >
-                  {t(link.key as "residential" | "commercial" | "automotive" | "process" | "reviews")}
+                  <span>{t(link.key as "residential" | "commercial" | "automotive" | "process" | "reviews")}</span>
+                  <span style={{ color: "var(--color-cyan)", fontWeight: 800 }}>→</span>
                 </button>
               ))}
               <a
                 href={siteConfig.phone.href}
                 className="btn btn-primary"
-                style={{ marginTop: "0.75rem", justifyContent: "center" }}
+                style={{ marginTop: "0.75rem", justifyContent: "center", gap: "0.5rem" }}
               >
                 <Phone size={16} />
                 {siteConfig.phone.display}
