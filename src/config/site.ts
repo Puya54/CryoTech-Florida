@@ -1,7 +1,13 @@
 // src/config/site.ts
 export const siteConfig = {
   name: "CryoTech Florida",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://cryotechflorida.com",
+  url: (() => {
+    let siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://cryotechflorida.com";
+    if (siteUrl && !siteUrl.startsWith("http://") && !siteUrl.startsWith("https://")) {
+      siteUrl = `https://${siteUrl}`;
+    }
+    return siteUrl;
+  })(),
 
   phone: {
     display: "(305) 555-0100",
