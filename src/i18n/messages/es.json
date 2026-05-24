@@ -1,0 +1,158 @@
+{
+  "nav": {
+    "residential": "Residencial",
+    "commercial": "Comercial",
+    "automotive": "Automotriz",
+    "process": "Nuestro Proceso",
+    "reviews": "Reseñas",
+    "contact": "Contacto",
+    "getQuote": "Obtener Cotización"
+  },
+  "hero": {
+    "badge": "Los Expertos en Refrigeración de Miami-Dade",
+    "headline": "Aire Frío.\nGarantizado.",
+    "subheadline": "Soluciones de AC residencial, comercial y automotriz en toda el área de Miami-Dade — 24/7, todo el año.",
+    "selectChannel": "¿En qué podemos ayudarte hoy?",
+    "residential": { "title": "Residencial", "description": "Reparación, instalación y mantenimiento de AC para el hogar" },
+    "commercial": { "title": "Comercial", "description": "Contratos HVAC/R, cuartos fríos y respuesta de emergencia" },
+    "automotive": { "title": "Automotriz", "description": "Recarga R-134a y R-1234yf, compresor y reparación de fugas" },
+    "trust1": "Técnicos Certificados",
+    "trust2": "Licencia Miami-Dade",
+    "trust3": "Emergencias 24/7"
+  },
+  "residential": {
+    "sectionBadge": "Servicios Residenciales",
+    "headline": "Confort en Tu Hogar, Entregado Rápido",
+    "subheadline": "Técnicos certificados en tu puerta — el mismo día en la mayoría de los vecindarios de Miami.",
+    "services": {
+      "repair": { "title": "Reparación de AC", "description": "Diagnóstico y reparación rápida de todas las marcas. Lo reparamos bien a la primera." },
+      "maintenance": { "title": "Mantenimiento", "description": "Servicios preventivos para mantener tu equipo funcionando a máxima eficiencia todo el año." },
+      "installation": { "title": "Instalación", "description": "Instalación de nuevos sistemas con dimensionamiento experto y optimización de eficiencia energética." },
+      "airQuality": { "title": "Calidad del Aire", "description": "Limpieza de ductos, purificadores UV y filtración HEPA para un aire interior más saludable." }
+    },
+    "emergencyCta": "Reparación de Emergencia — Llamar Ahora",
+    "whatsappCta": "Chatear por WhatsApp"
+  },
+  "commercial": {
+    "sectionBadge": "Servicios Comerciales",
+    "headline": "Hecho para Negocios.\nDiseñado para el Uptime.",
+    "subheadline": "Desde refrigeradores de restaurantes hasta HVAC de oficinas — protegemos tu operación las 24 horas.",
+    "services": {
+      "hvac": { "title": "HVAC/R Comercial", "description": "Calefacción, ventilación y refrigeración a escala completa para instalaciones comerciales." },
+      "walkin": { "title": "Cuartos Fríos y Congeladores", "description": "Instalación, reparación y mantenimiento de cámaras frigoríficas y cuartos fríos." },
+      "contracts": { "title": "Contratos de Mantenimiento", "description": "Acuerdos de servicio personalizados que garantizan cero tiempo de inactividad en tu operación." },
+      "emergency": { "title": "Respuesta de Emergencia 24/7", "description": "¿Falla crítica de equipo? Nuestro equipo llega al sitio en horas." }
+    },
+    "stats": {
+      "clients": "500+ Clientes Comerciales",
+      "response": "< 4h Respuesta de Emergencia",
+      "uptime": "99.7% Uptime SLA",
+      "years": "10+ Años en Miami"
+    },
+    "rfpTitle": "Solicitar una Propuesta",
+    "rfpSubtitle": "Cuéntanos sobre tu instalación y te enviaremos un plan de servicio personalizado en 24 horas."
+  },
+  "automotive": {
+    "sectionBadge": "Servicios de AC Automotriz",
+    "headline": "Vence el Calor de Miami.\nEn Cada Viaje.",
+    "subheadline": "Diagnóstico profesional, recarga y reparación de AC automotriz para todas las marcas y modelos.",
+    "services": {
+      "recharge": { "title": "Recarga de Refrigerante", "description": "R-134a y R-1234yf (aceite PAG incluido). Equipos certificados, carga precisa." },
+      "compressor": { "title": "Reparación de Compresor", "description": "Reemplazo completo de compresor y reparación de correas para todas las marcas." },
+      "leak": { "title": "Detección de Fugas", "description": "Prueba con tinte UV y vacío para un diagnóstico preciso de fugas de refrigerante." },
+      "diagnosis": { "title": "Diagnóstico Completo de AC", "description": "Escaneo electrónico de diagnóstico y prueba de presión — sabe exactamente qué está fallando." }
+    },
+    "mapTitle": "Encuéntranos en Miami",
+    "mapSubtitle": "Visita nuestro taller o agenda una visita a domicilio.",
+    "directionsBtn": "Obtener Indicaciones"
+  },
+  "process": {
+    "sectionBadge": "El Estándar CryoTech Florida",
+    "headline": "Nuestra Promesa de Servicio en 4 Pasos",
+    "subheadline": "Cada trabajo — residencial, comercial o automotriz — sigue el mismo proceso riguroso.",
+    "steps": {
+      "contact": { "title": "Contáctanos", "description": "Comunícate con nosotros 24/7 por teléfono, WhatsApp o formulario en línea. Respondemos en minutos." },
+      "diagnosis": { "title": "Diagnóstico Experto", "description": "Nuestro técnico certificado realiza una inspección completa y te da un presupuesto claro y transparente." },
+      "repair": { "title": "Reparación de Precisión", "description": "Utilizamos repuestos de fábrica y refrigerantes conformes con la EPA. Sin atajos." },
+      "guarantee": { "title": "Garantía de Calidad", "description": "Todo el trabajo está respaldado por una garantía escrita. No terminamos hasta que estés 100% satisfecho." }
+    },
+    "certTitle": "Nuestras Certificaciones y Membresías"
+  },
+  "testimonials": {
+    "sectionBadge": "Lo Que Dice Miami",
+    "headline": "La Confianza de Todo Miami-Dade",
+    "subheadline": "Reseñas reales de vecinos reales.",
+    "googleBadge": "Calificado en Google Reviews",
+    "items": [
+      { "name": "Carlos M.", "location": "Coral Gables", "type": "residential", "rating": 5, "text": "Mi AC se apagó un sábado con 35°C. CryoTech tenía un técnico en mi puerta en 2 horas. Lo repararon en el acto. Servicio increíble." },
+      { "name": "Maria L.", "location": "Doral", "type": "commercial", "rating": 5, "text": "Manejamos 3 restaurantes en Miami. CryoTech maneja todos nuestros contratos de refrigeración. Cero tiempo de inactividad en 2 años. Valen cada centavo." },
+      { "name": "James T.", "location": "Hialeah", "type": "automotive", "rating": 5, "text": "El AC de mi camión estaba muerto en pleno verano. Lo recargaron con R-134a y encontraron una pequeña fuga — todo en menos de 90 minutos. Increíble." },
+      { "name": "Sofia R.", "location": "Brickell", "type": "residential", "rating": 5, "text": "Profesionales, puntuales y transparentes con los precios. La instalación de mi nueva unidad Carrier fue impecable. Lo recomiendo a cualquier propietario de Miami." },
+      { "name": "David K.", "location": "Kendall", "type": "commercial", "rating": 5, "text": "Nuestro congelador de entrada falló a las 2 AM. El equipo de emergencia de CryoTech estaba allí a las 4 AM. Salvaron miles en productos. Verdadero servicio 24/7." },
+      { "name": "Ana P.", "location": "Aventura", "type": "residential", "rating": 5, "text": "Instalaron un purificador UV y limpiaron todos mis conductos. La calidad del aire mejoró dramáticamente — las alergias de mi familia están finalmente bajo control." }
+    ]
+  },
+  "form": {
+    "title": "Obtén Tu Cotización Gratis",
+    "subtitle": "Respuesta rápida — generalmente en menos de 30 minutos.",
+    "step1Title": "¿Qué servicio necesitas?",
+    "step2Title": "Tu Información de Contacto",
+    "step3Title": "¿Qué tan urgente es?",
+    "residential": "AC para Hogar",
+    "commercial": "HVAC/R Comercial",
+    "automotive": "AC Automotriz",
+    "name": "Nombre Completo",
+    "namePlaceholder": "Juan Pérez",
+    "phone": "Número de Teléfono",
+    "phonePlaceholder": "(305) 000-0000",
+    "zip": "Código ZIP",
+    "zipPlaceholder": "33101",
+    "emergency": "Emergencia — Necesito ayuda AHORA",
+    "thisWeek": "Agendar para esta semana",
+    "quote": "Solo estoy cotizando",
+    "submit": "Enviar Solicitud",
+    "submitting": "Enviando...",
+    "successTitle": "¡Solicitud Recibida!",
+    "successMessage": "Un especialista de CryoTech te contactará en menos de 30 minutos.",
+    "emergencyMessage": "Para asistencia inmediata, llámanos directamente:",
+    "errorName": "Por favor ingresa tu nombre",
+    "errorPhone": "Por favor ingresa un número de teléfono válido de EE.UU.",
+    "errorZip": "Por favor ingresa un código ZIP válido de Miami-Dade"
+  },
+  "rfp": {
+    "company": "Nombre de la Empresa",
+    "contact": "Persona de Contacto",
+    "phone": "Teléfono",
+    "email": "Correo Electrónico",
+    "facilityType": "Tipo de Instalación",
+    "facilityRestaurant": "Restaurante / Servicio de Alimentos",
+    "facilityOffice": "Edificio de Oficinas",
+    "facilityWarehouse": "Almacén / Cámara Frigorífica",
+    "facilityRetail": "Tienda al por Menor",
+    "facilityHotel": "Hotel / Hospitalidad",
+    "facilityOther": "Otro",
+    "description": "Describe tus necesidades de refrigeración",
+    "descriptionPlaceholder": "Tipos de equipos, metros cuadrados, número de unidades, contratos existentes...",
+    "upload": "Adjuntar Planos / Especificaciones (opcional)",
+    "uploadHint": "PDF o imágenes, máx. 10MB",
+    "submit": "Enviar Solicitud de Propuesta",
+    "success": "¡Gracias! Te enviaremos tu propuesta personalizada en un plazo de 24 horas."
+  },
+  "footer": {
+    "tagline": "Aire Frío. Garantizado.",
+    "quickLinks": "Enlaces Rápidos",
+    "services": "Servicios",
+    "serviceAreas": "Áreas de Servicio",
+    "followUs": "Síguenos",
+    "rights": "Todos los derechos reservados.",
+    "license": "Con Licencia y Asegurado en el Condado de Miami-Dade",
+    "emergency": "Línea de Emergencia 24/7",
+    "privacyPolicy": "Política de Privacidad",
+    "terms": "Términos de Servicio"
+  },
+  "mobile": {
+    "call": "Llamar",
+    "whatsapp": "WhatsApp",
+    "quote": "Cotizar"
+  }
+}
