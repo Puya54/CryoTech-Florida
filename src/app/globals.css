@@ -344,17 +344,42 @@ body {
 
 /* ─── Floating Buttons Positioning & Mobile Offsets ─────────────────────────── */
 #whatsapp-float {
-  bottom: 6.5rem;
+  bottom: 6.5rem !important;
 }
 .chatbot-float-btn {
-  bottom: 1.75rem;
+  bottom: 1.75rem !important;
 }
 
 @media (max-width: 767px) {
   #whatsapp-float {
-    bottom: 11rem;
+    bottom: 11rem !important;
   }
   .chatbot-float-btn {
-    bottom: 6.5rem;
+    bottom: 6.5rem !important;
+  }
+}
+
+/* ─── Header Mobile Responsiveness ───────────────────────────────────────────── */
+.header-desktop-nav {
+  display: none !important;
+}
+.header-call-btn {
+  display: none !important;
+}
+.header-hamburger-toggle {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .header-desktop-nav {
+    display: flex !important;
+  }
+  .header-call-btn {
+    display: inline-flex !important;
+  }
+  .header-hamburger-toggle {
+    display: none !important;
   }
 }

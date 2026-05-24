@@ -73,7 +73,7 @@ export default function Header() {
             </button>
 
             {/* Desktop Nav */}
-            <nav style={{ alignItems: "center", gap: "0.25rem" }} className="hidden md:flex">
+            <nav style={{ alignItems: "center", gap: "0.25rem" }} className="header-desktop-nav">
               {NAV_LINKS.map((link) => (
                 <button
                   key={link.key}
@@ -122,7 +122,7 @@ export default function Header() {
               <a
                 href={siteConfig.phone.href}
                 id="header-call-cta"
-                className="btn btn-primary btn-sm hidden md:inline-flex"
+                className="btn btn-primary btn-sm header-call-btn"
                 style={{ gap: "0.375rem" }}
               >
                 <Phone size={14} />
@@ -132,7 +132,7 @@ export default function Header() {
               {/* Mobile menu toggle */}
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
-                className="md:hidden"
+                className="header-hamburger-toggle"
                 style={{
                   background: "none", border: "none", cursor: "pointer",
                   padding: "0.5rem", color: "var(--color-ink)",
