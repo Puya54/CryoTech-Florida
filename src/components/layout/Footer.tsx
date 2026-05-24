@@ -32,7 +32,7 @@ export default function Footer() {
                 display: "flex", alignItems: "center", justifyContent: "center",
                 overflow: "hidden"
               }}>
-                <img src="/logo.svg" alt="CryoTech Logo" width="36" height="36" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                <img src="/logo-premium.png" alt="CryoTech Logo" width="36" height="36" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
               </div>
               <div style={{ lineHeight: 1 }}>
                 <span style={{ fontSize: "1rem", fontWeight: 800, color: "white", letterSpacing: "-0.02em" }}>CryoTech</span>
