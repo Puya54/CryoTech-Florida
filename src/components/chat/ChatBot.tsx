@@ -23,6 +23,16 @@ export default function ChatBot() {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const [mounted, setMounted] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -98,8 +108,13 @@ export default function ChatBot() {
         aria-label="Abrir asistente virtual"
         className="chatbot-float-btn"
         style={{
-          position: "fixed", right: "1.75rem", zIndex: 9999,
-          width: "60px", height: "60px", borderRadius: "50%",
+          position: "fixed",
+          bottom: mounted && isMobile ? "6.5rem" : "1.75rem",
+          right: "1.75rem",
+          zIndex: 9999,
+          width: "60px",
+          height: "60px",
+          borderRadius: "50%",
           background: "linear-gradient(135deg, var(--color-cyan) 0%, #0891b2 100%)",
           color: "white", border: "none", cursor: "pointer",
           boxShadow: "0 4px 24px rgba(6, 182, 212, 0.45)",

@@ -5,6 +5,16 @@ import { useEffect, useRef, useState } from "react";
 export default function WhatsAppButton() {
   const btnRef = useRef<HTMLAnchorElement>(null);
   const [show, setShow] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   /* Appear after 2s so it doesn't compete with the welcome modal */
   useEffect(() => {
@@ -38,6 +48,7 @@ export default function WhatsAppButton() {
       aria-label="Contactar por WhatsApp"
       style={{
         position: "fixed",
+        bottom: mounted && isMobile ? "11rem" : "6.5rem",
         right: "1.75rem",
         zIndex: 9990,
         width: "56px",

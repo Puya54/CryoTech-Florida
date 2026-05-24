@@ -22,6 +22,16 @@ export default function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -73,30 +83,32 @@ export default function Header() {
             </button>
 
             {/* Desktop Nav */}
-            <nav style={{ alignItems: "center", gap: "0.25rem" }} className="header-desktop-nav">
-              {NAV_LINKS.map((link) => (
-                <button
-                  key={link.key}
-                  onClick={() => handleNavClick(link.href)}
-                  style={{
-                    background: "none", border: "none", cursor: "pointer",
-                    padding: "0.5rem 0.75rem", borderRadius: "6px",
-                    fontSize: "0.9rem", fontWeight: 500, color: scrolled ? "var(--color-ink)" : "var(--color-ink)",
-                    transition: "all 0.2s",
-                  }}
-                  onMouseEnter={(e) => {
-                    (e.target as HTMLButtonElement).style.color = "var(--color-cyan)";
-                    (e.target as HTMLButtonElement).style.backgroundColor = "var(--color-cyan-glow)";
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.target as HTMLButtonElement).style.color = "var(--color-ink)";
-                    (e.target as HTMLButtonElement).style.backgroundColor = "transparent";
-                  }}
-                >
-                  {t(link.key as "residential" | "commercial" | "automotive" | "process" | "reviews")}
-                </button>
-              ))}
-            </nav>
+            {(!mounted || !isMobile) && (
+              <nav style={{ display: "flex", alignItems: "center", gap: "0.25rem" }}>
+                {NAV_LINKS.map((link) => (
+                  <button
+                    key={link.key}
+                    onClick={() => handleNavClick(link.href)}
+                    style={{
+                      background: "none", border: "none", cursor: "pointer",
+                      padding: "0.5rem 0.75rem", borderRadius: "6px",
+                      fontSize: "0.9rem", fontWeight: 500, color: scrolled ? "var(--color-ink)" : "var(--color-ink)",
+                      transition: "all 0.2s",
+                    }}
+                    onMouseEnter={(e) => {
+                      (e.target as HTMLButtonElement).style.color = "var(--color-cyan)";
+                      (e.target as HTMLButtonElement).style.backgroundColor = "var(--color-cyan-glow)";
+                    }}
+                    onMouseLeave={(e) => {
+                      (e.target as HTMLButtonElement).style.color = "var(--color-ink)";
+                      (e.target as HTMLButtonElement).style.backgroundColor = "transparent";
+                    }}
+                  >
+                    {t(link.key as "residential" | "commercial" | "automotive" | "process" | "reviews")}
+                  </button>
+                ))}
+              </nav>
+            )}
 
             {/* Right Actions */}
             <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
@@ -119,28 +131,31 @@ export default function Header() {
               </button>
 
               {/* CTA */}
-              <a
-                href={siteConfig.phone.href}
-                id="header-call-cta"
-                className="btn btn-primary btn-sm header-call-btn"
-                style={{ gap: "0.375rem" }}
-              >
-                <Phone size={14} />
-                {siteConfig.phone.display}
-              </a>
+              {(!mounted || !isMobile) && (
+                <a
+                  href={siteConfig.phone.href}
+                  id="header-call-cta"
+                  className="btn btn-primary btn-sm"
+                  style={{ gap: "0.375rem" }}
+                >
+                  <Phone size={14} />
+                  {siteConfig.phone.display}
+                </a>
+              )}
 
               {/* Mobile menu toggle */}
-              <button
-                onClick={() => setMobileOpen(!mobileOpen)}
-                className="header-hamburger-toggle"
-                style={{
-                  background: "none", border: "none", cursor: "pointer",
-                  padding: "0.5rem", color: "var(--color-ink)",
-                }}
-                aria-label="Toggle menu"
-              >
-                {mobileOpen ? <X size={22} /> : <Menu size={22} />}
-              </button>
+              {(mounted && isMobile) && (
+                <button
+                  onClick={() => setMobileOpen(!mobileOpen)}
+                  style={{
+                    background: "none", border: "none", cursor: "pointer",
+                    padding: "0.5rem", color: "var(--color-ink)",
+                  }}
+                  aria-label="Toggle menu"
+                >
+                  {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+                </button>
+              )}
             </div>
           </div>
         </div>
