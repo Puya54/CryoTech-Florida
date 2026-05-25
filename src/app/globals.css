@@ -59,6 +59,11 @@
   padding: 0;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
@@ -72,7 +77,6 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
 }
 
 /* ─── Focus Styles ───────────────────────────────────────────────────────────── */
@@ -381,5 +385,65 @@ body {
   }
   .header-hamburger-toggle {
     display: none !important;
+  }
+}
+
+/* ─── Hero Stats Responsive Grid ────────────────────────────────────────────── */
+.hero-stats-strip {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 1rem !important;
+  padding: 1.5rem 1rem !important;
+}
+.hero-stat-item {
+  border-right: none !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+  padding: 0.5rem 0.25rem !important;
+}
+.hero-stat-item:nth-child(3),
+.hero-stat-item:nth-child(4) {
+  border-bottom: none !important;
+}
+
+@media (min-width: 768px) {
+  .hero-stats-strip {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 0 !important;
+    padding: 1.25rem 0 !important;
+  }
+  .hero-stat-item {
+    flex: 1 1 0 !important;
+    max-width: 220px !important;
+    padding: 0 1rem !important;
+    border-bottom: none !important;
+    border-right: 1px solid rgba(255,255,255,0.08) !important;
+  }
+  .hero-stat-item:last-child {
+    border-right: none !important;
+  }
+}
+
+/* ─── SmartForm Services Responsive Grid ─────────────────────────────────────── */
+.form-services-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 0.5rem !important;
+}
+@media (min-width: 480px) {
+  .form-services-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* ─── SmartForm Columns Responsive Grid ──────────────────────────────────────── */
+.form-row-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 0.75rem !important;
+}
+@media (min-width: 480px) {
+  .form-row-grid {
+    grid-template-columns: 1fr 1fr !important;
   }
 }

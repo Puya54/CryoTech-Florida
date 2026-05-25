@@ -443,16 +443,13 @@ export default function HeroSection() {
       {/* ── Stats counter strip ── */}
       <div
         ref={counterRef}
+        className="hero-stats-strip"
         style={{
           position: "relative", zIndex: 4,
           width: "100%",
           background: "rgba(255,255,255,0.04)",
           borderTop: "1px solid rgba(255,255,255,0.08)",
           backdropFilter: "blur(12px)",
-          padding: "1.25rem 0",
-          display: "flex",
-          justifyContent: "center",
-          gap: "0",
           opacity: 0,
         }}
       >
@@ -464,12 +461,9 @@ export default function HeroSection() {
         ].map((stat, i) => (
           <div
             key={i}
+            className="hero-stat-item"
             style={{
-              flex: "1 1 0",
-              maxWidth: "220px",
               textAlign: "center",
-              padding: "0 1rem",
-              borderRight: i < 3 ? "1px solid rgba(255,255,255,0.08)" : "none",
             }}
           >
             <div style={{

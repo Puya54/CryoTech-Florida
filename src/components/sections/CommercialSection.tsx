@@ -188,7 +188,7 @@ export default function CommercialSection() {
                   {t("rfpSubtitle")}
                 </p>
                 <form onSubmit={handleSubmit(onSubmit)} style={{ display: "flex", flexDirection: "column", gap: "0.875rem" }}>
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem" }}>
+                  <div className="form-row-grid">
                     <div>
                       <label className="form-label" htmlFor="rfp-company">{rfp("company")}</label>
                       <input id="rfp-company" type="text" className={`form-input ${errors.company ? "error" : ""}`} {...register("company")} />
@@ -198,7 +198,7 @@ export default function CommercialSection() {
                       <input id="rfp-contact" type="text" className={`form-input ${errors.contact ? "error" : ""}`} {...register("contact")} />
                     </div>
                   </div>
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem" }}>
+                  <div className="form-row-grid">
                     <div>
                       <label className="form-label" htmlFor="rfp-phone">{rfp("phone")}</label>
                       <input id="rfp-phone" type="tel" className={`form-input ${errors.phone ? "error" : ""}`} {...register("phone")} />

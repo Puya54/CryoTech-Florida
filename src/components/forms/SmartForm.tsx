@@ -114,7 +114,7 @@ export default function SmartForm({ defaultService = "residential" }: Props) {
         {/* Step 1: Service type */}
         <div style={{ marginBottom: "1.5rem" }}>
           <p className="form-label" style={{ marginBottom: "0.625rem" }}>{t("step1Title")}</p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "0.5rem" }}>
+          <div className="form-services-grid">
             {SERVICES.map((s) => (
               <button
                 key={s}
