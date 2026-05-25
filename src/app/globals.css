@@ -59,6 +59,11 @@
   padding: 0;
 }
 
+img, svg, video, iframe, canvas {
+  max-width: 100%;
+  height: auto;
+}
+
 html, body {
   max-width: 100%;
   overflow-x: hidden;
@@ -445,5 +450,42 @@ body {
 @media (min-width: 480px) {
   .form-row-grid {
     grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+/* ─── Responsive Buttons & Form Cards ────────────────────────────────────────── */
+.form-card {
+  background: white;
+  border-radius: 20px;
+  padding: 1.25rem !important;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg);
+}
+
+@media (min-width: 480px) {
+  .form-card {
+    padding: 2rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .btn {
+    white-space: normal !important;
+    text-align: center !important;
+    padding: 0.625rem 1rem !important;
+    font-size: 0.875rem !important;
+    min-height: 44px !important;
+    height: auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .btn-lg {
+    padding: 0.75rem 1.25rem !important;
+    font-size: 0.9375rem !important;
+    min-height: 48px !important;
+  }
+  .btn svg {
+    flex-shrink: 0;
   }
 }

@@ -169,7 +169,7 @@ export default function CommercialSection() {
           <motion.div
             initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            style={{ background: "white", borderRadius: "20px", padding: "2rem", border: "1px solid var(--color-border)", boxShadow: "var(--shadow-lg)" }}
+            className="form-card"
           >
             {submitted ? (
               <div style={{ textAlign: "center", padding: "2rem 0" }}>

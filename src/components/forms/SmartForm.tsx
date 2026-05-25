@@ -102,7 +102,7 @@ export default function SmartForm({ defaultService = "residential" }: Props) {
   }
 
   return (
-    <div style={{ background: "white", borderRadius: "20px", padding: "2rem", border: "1px solid var(--color-border)", boxShadow: "var(--shadow-lg)" }}>
+    <div className="form-card">
       <h3 style={{ fontSize: "1.25rem", fontWeight: 700, color: "var(--color-ink)", marginBottom: "0.25rem" }}>
         {t("title")}
       </h3>
